@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password]{
+width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #001;
+    padding: 10px;
+}
+
+</style>
+<script>
+      function validateform()
+      {
+      	 var x2 = document.forms["myform"]["firstname"].value;
+ 	   if (x2 == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+
+	var x3 = document.forms["myform"]["lastname"].value;
+   	 if (x3 == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+         var x=document.forms["myform"]["email"].value;
+		pos1=x.indexOf("@");
+		pos2=x.lastIndexOf(".");
+		if(pos1<1 || (pos2-pos1<2))
+		{
+		alert("Please enter a valid Email Id");
+		document.forms["myform"]["email"].focus();
+		return false;
+		}
+		if (x == " ")
+		 {
+        	alert("Name must be filled out");
+		return false;
+		}
+	var x1=document.forms["myform"]["pwd"].value;
+	var y=document.forms["myform"]["repwd"].value;
+	var z=x1.length;
+	if((x1!=y || !x1))
+	{
+	alert("Password does not match!!! Please give correct password");
+	return false;
+	}	        
+        }
+</script>
+<body>
+
+ <div class="center">
+<form action="">
+  <div class="form-group">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+    <div class="form-group">
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  </div>
+    <div class="form-group">
+      <label for="email">Email:</label><br>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label><br>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="form-group">
+      <label for="repwd">Reenter Password:</label><br>
+      <input type="password" class="form-control" id="repwd" placeholder="Re-enter password" name="repwd">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<a href="onlineshopping.html"><b>For More Shopping Click Here</b></a>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+body {
+	background-color:NavajoWhite;
+	}
+	
+h1{
+	background-color: white;
+	border-style:ridge;
+	border-color:white;
+	border-bottom-width:4px;
+	border-top-width:4px;
+	border-left-width:4px;
+	border-right-width:4px;
+	 color: brown;
+	 text-align: center;
+	 font: bold 300% verdana;
+}
+
+h2{
+	background-color: pink;
+	 border: 2px solid black;
+    border-radius: 8px;
+	 text-align: center;
+	 font: bold 120% verdana;
+	}
+	
+h3{
+	background-color: khaki;
+	 border: 2px solid black;
+    	border-radius: 8px;
+	 text-align: center;
+	 font: bold 120% verdana;
+	}
+	
+p {
+ color: #333300;
+ text-align: left;
+ border: 3px solid powderblue;
+    padding: 30px;
+}
+
+
+

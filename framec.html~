@@ -1,0 +1,174 @@
+<html>
+<head><style>
+/* Slideshow container */
+img {
+    border: 4px solid #ddd;
+    border-radius: 7px;
+    padding: 5px;
+    width: 150px;
+    border-color:black;
+}
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</style></head><body>
+<marquee><h3><b>**Get an Exiciting Offers here...**</b></h3></marquee></body>
+<center><div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/img4.jpg" style="width:300;height:200">
+</div>
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/img10.jpg" style="width:300;height:200"> 
+</div>
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/sh2.jpeg" style="width:300;height:200"> 
+</div>
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/f2.jpg" style="width:300;height:200">
+</div>
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/k1.jpg" style="width:300;height:200">  
+</div>
+
+<div class="mySlides fade">
+  <img src="/home/aditya/SL3project/w2.jpg" style="width:300;height:200">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+    <span class="dot"></span>
+      <span class="dot"></span>
+</center></div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script></head>
+<body background="s1.jpg">
+<h2><b>Men's Wear</b></h2><br>
+<img src=/home/aditya/SL3project/img4.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/img5.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/img6.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/img7.jpg style="width:200;height:200">
+<br>
+<h2><b>Women's Wear</b></h2><br>
+<img src=/home/aditya/SL3project/img8.jpeg style="width:200;height:200">
+<img src=/home/aditya/SL3project/img9.png style="width:200;height:200">
+<img src=/home/aditya/SL3project/img10.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/img11.jpg style="width:200;height:200">
+<br>
+<h2><b>FootWear</b></h2><br>
+<img src=/home/aditya/SL3project/sh1.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/sh2.jpeg style="width:200;height:200">
+<img src=/home/aditya/SL3project/sh3.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/sh4.jpg style="width:200;height:200">
+<br>
+<h2><b>Home and furniture</b></h2><br>
+<img src=/home/aditya/SL3project/f1.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/f2.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/f3.jpeg style="width:200;height:200">
+<img src=/home/aditya/SL3project/f4.jpeg style="width:200;height:200">
+<br>
+<h2><b>Kitchen Appliances</b></h2><br>
+<img src=/home/aditya/SL3project/k1.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/k2.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/k3.png style="width:200;height:200">
+<img src=/home/aditya/SL3project/k4.jpg style="width:200;height:200">
+<br>
+<h2><b>Watches</b></h2><br>
+<img src=/home/aditya/SL3project/w1.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/w2.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/w3.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/w4.jpg style="width:200;height:200">
+<br>
+<h2><b>Smart Phones</b></h2><br>
+<img src=/home/aditya/SL3project/m1.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/m2.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/m3.jpg style="width:200;height:200">
+<img src=/home/aditya/SL3project/m4.jpg style="width:200;height:200">
+</body>
+</html>

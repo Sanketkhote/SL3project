@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 25px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=textarea], select {
+    width: 50%;
+    padding: 30px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email] {
+    width: 50%;
+    padding: 25px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; width: 50%;
+    padding: 25px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password]{
+width: 50%;
+    padding: 25px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; width: 50%;
+    padding: 25px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #001;
+    padding: 10px;
+}
+</style>
+<script>
+      function validateform()
+      {
+      	 var x = document.forms["myform"]["firstname"].value;
+ 	   if (x == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+
+	var x = document.forms["myform"]["lastname"].value;
+   	 if (x == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+         var x=document.forms["myform"]["email"].value;
+		pos1=x.indexOf("@");
+		pos2=x.lastIndexOf(".");
+		if(pos1<1 || (pos2-pos1<2))
+		{
+		alert("Please enter a valid Email Id");
+		document.forms["myform"]["email"].focus();
+		return false;
+		}
+        
+        if(document.forms["myform"]["number"].value.length!="10")
+		{
+		alert("Mobile Number is blank");	
+		document.forms["myform"]["number"].focus();
+		return false;
+		}
+      }
+</script>
+<body>
+
+<div>
+  <form name="myform" action="new.html" target="_blank" onsubmit="return validateform()" method="post">
+     <div class="form-group">
+      <label for="name">Name:</label>
+     <input type="text" name="name" placeholder="Enter name">
+  <span class="error">* <?php echo $nameErr;?></span>
+  </div>
+    
+   <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <span class="error">* <?php echo $emailErr;?></span>
+    </div>
+    
+     <div class="form-group">
+    <label for="phone">Phone no:</label>
+    <input type="text" id="phone" name="number" placeholder="Enter phone number">
+    <span class="error">* <?php echo $phoneerr;?></span>
+    </div>
+    
+    
+    <div class="form-group">
+    <label for="add">Address:</label>
+    <input type="textarea" id="add" name="address" placeholder="Enter Address..">
+    </div>
+
+<br>
+	<label for="add"><b>Price:$18 only.</b></label>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+

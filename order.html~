@@ -1,0 +1,94 @@
+<html>
+<head></head><script>
+      function validateform()
+      {
+      	 var x = document.forms["myform"]["firstname"].value;
+ 	   if (x == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+
+	var x = document.forms["myform"]["lastname"].value;
+   	 if (x == "") {
+        alert("Name must be filled out");
+        return false;
+	}
+         var x=document.forms["myform"]["email"].value;
+		pos1=x.indexOf("@");
+		pos2=x.lastIndexOf(".");
+		if(pos1<1 || (pos2-pos1<2))
+		{
+		alert("Please enter a valid Email Id");
+		document.forms["myform"]["email"].focus();
+		return false;
+		}
+        
+        if(document.forms["myform"]["number"].value.length!="10")
+		{
+		alert("Mobile Number is blank");	
+		document.forms["myform"]["number"].focus();
+		return false;
+		}
+      }
+</script>
+<body bgcolor="NavajoWhite">
+<center><img src="/home/aditya/te40/copperchocs.png" style="width:600;height:100"></center>
+<center><b><h1><font color="brown">Order here</font></h1></b></center>
+    <form name="myform" action="/home/aditya/SL3project/" onsubmit="return validateform()" method="post">
+    First name:
+  <input type="text" name="firstname">
+  Last name:
+  <input type="text" name="lastname">
+    <br><br>
+    Address:<br><textarea name="message" rows="5" cols="20">
+   </textarea>
+    <br><br>
+    Email-id:
+  <input type="email" name="email">
+  <br><br>
+   Pickup date and time:
+  <input type="datetime-local" name="bdaytime">
+  <br><br>
+     Phone No:<input type="text" name="number">
+     <br><br>
+     <label>Type of cake:</label>
+         <select name="dropdown">
+             <option value = "Red velvet">Red velvet cake</option>
+               <option value = "Chocolate">Chocolate cake</option>
+               <option value = "Black forest">Black forest cake</option>
+               <option value = "Blue berry">Blue berry cake</option>
+               <option value="Pineapple">Pineapple cake</option>
+               <option value="Oreo cake">Oreo cake</option>
+             </select>
+       
+          <br><br>
+           <label>Cake size:</label>
+         <select name="dropdown">
+             <option value = "half kg">half kgs(same prize as shown in first page)</option>
+               <option value = "one kg">one kg(extra Rs.150)</option>
+               <option value = "two layered">two layered(extra Rs.250)</option>
+               <option value = "three layered">three layered(extra Rs.400)</option>
+               <option value="four layered">four layered(extra Rs.550)</option>
+             </select>
+             <br><br>
+             Decoration:
+             <br><input type="radio" name="decoration" value="flowers" checked> flowers
+ 		 <input type="radio" name="decoration" value="ballons" checked> ballons
+	  <input type="radio" name="decoration" value="hearts" checked> hearts
+	  <input type="radio" name="decoration" value="ballons" checked> ballons
+	  <input type="radio" name="decoration" value="hearts and flowers" checked> hearts and flowers
+	  <input type="radio" name="decoration" value="hearts" checked> hearts
+	  <input type="radio" name="decoration" value="piped cross" checked> piped cross
+	  <input type="radio" name="decoration" value="baby items" checked> baby items
+	  <input type="radio" name="decoration" value="polka dots" checked>polka dots
+             <br><br>
+             Writings(Happy birthday,wedding anniversary,congratulations,etc):<br>
+  		<textarea name="message" rows="1" cols="40">
+   		</textarea>
+             <br><br>   
+       <input type="submit" value="Submit">
+<button type="button" onclick = onclick1()> <input type="reset" value="Reset"><br></button> 
+
+	</form>
+</body>
+</html>
